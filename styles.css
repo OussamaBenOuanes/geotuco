@@ -1,0 +1,117 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+}
+
+.background-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+}
+
+/* Default background for desktop */
+.background-container {
+    background-image: url('assets/MP-BG.webp');
+}
+
+/* Background for mobile */
+@media (max-width: 450px) {
+    .background-container {
+        background-image: url('assets/MP-BG-PH.webp');
+    }
+
+    /* Increase margin-top for mobile devices */
+    .maintenance-text {
+        margin-top: 25%;
+    }
+}
+
+.centered-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically within centered-content */
+    align-items: center;
+}
+
+.centered-text {
+    font-size: clamp(3.2rem, 6vw + 1rem, 8rem); /* Dynamically adjust the font size */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensures the text takes the full width */
+    max-width: 500px; /* Set a maximum width for both text and separator line */
+    margin: 0 auto; /* Center the text within its container */
+}
+
+.gif-container {
+    display: inline-block;
+    width: 1em; /* Set width to match the size of a single character */
+    height: 1em; /* Set height to match the size of a single character */
+    overflow: hidden;
+    vertical-align: middle; /* Align vertically with the text */
+    position: relative; /* Ensures the GIF scales with the text size */
+    font-size: inherit; /* Inherit the font size of the parent centered-text */
+}
+
+.gif-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block; /* Remove the inline gap issue */
+}
+
+.separator-line {
+    border-top: 4px solid white; /* Change color as needed */
+    width: 100%;
+    max-width: 500px; /* Same max-width as centered-text */
+    margin: 1px auto; /* Center the line within its container */
+}
+
+.subtitle {
+    font-size: clamp(0.5rem, 2vw + 0.9rem, 4rem); /* Dynamically adjust the subtitle font size */
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.subtitle strong {
+    margin-right: 10px; /* Add space between GEOTUNISIE and CONSULTING */
+}
+
+.subtitle .consulting {
+    font-family: 'Berlin Sans FB', sans-serif; /* Use different font for CONSULTING */
+}
+
+/* New styles for maintenance text */
+.maintenance-text {
+    font-family: 'Rubik', sans-serif; /* Use Rubik font */
+    font-size: clamp(1.5rem, 2vw + 0.5rem, 3rem); /* Adjust font size dynamically */
+    margin-top: 8%; /* Default margin-top for larger screens */
+    color: white;
+    text-align: center;
+
+}
+.social-icons {
+    margin-top: 15px; /* Add some space above the icons */
+    display: flex;
+    gap: 1rem; /* Add space between icons */
+}
+.social-link {
+    display: inline-block;
+}
+
+.icon {
+    width: clamp(1.5rem, 2vw + 0.5rem, 3rem); /* Set icon size */
+    height: clamp(1.5rem, 2vw + 0.5rem, 3rem);
+}
